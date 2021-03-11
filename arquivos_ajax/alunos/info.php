@@ -27,8 +27,11 @@
 		
 	$aluno = '
 	
+	<img src="arquivos_up/alunos/'.$dado['img_alunos'].'" id="imgAtual">
+	
 	<span>COD</span>
 	<p>'.$dado['cod_alunos'].'</p>
+	
 	<span>Nome</span>
 	<p>'.$dado['nome_alunos'].'</p>
 	
