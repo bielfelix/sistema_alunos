@@ -1,0 +1,13 @@
+Erro: 
+
+não foi possível executar a consulta
+
+Sql: 
+
+SELECT COUNT(id) AS num_result FROM alunos
+
+Mensagem gerada: 
+
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'
+
+
