@@ -21,6 +21,7 @@
 				<th scope="col">#</th>
 				<th scope="col">Nome</th>
 				<th scope="col">E-mail</th>
+				<th scope="col">Tipo</th>
 				<th scope="col">Ações</th>
 			</tr>
 		</thead>
@@ -32,12 +33,19 @@
 	
 	while($dado = $bd->row($query)){
 		
+		if($dado['tipo_usuarios'] == '1'){
+			$tipo = 'Comum';
+		}else if($dado['tipo_usuarios'] == '2'){
+			$tipo = 'admin';
+		}
+		
 		$usuarios .= '
 		
 		<tr>
 			<th scope="row">'.$dado['cod_usuarios'].'</th>
 			<td>'.$dado['nome_usuarios'].'</td>
 			<td>'.$dado['email_usuarios'].'</td>
+			<td>'.$tipo.'</td>
 			<td>
 				<a onClick="modal_edUsuario('.$dado['cod_usuarios'].')" data-bs-toggle="modal" data-bs-target="#exampleModal">
 				<i class="fas fa-user-edit icone-info"></i>
