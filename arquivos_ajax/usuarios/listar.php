@@ -34,7 +34,7 @@
 	while($dado = $bd->row($query)){
 		
 		if($dado['tipo_usuarios'] == '1'){
-			$tipo = 'Comum';
+			$tipo = 'Normal';
 		}else if($dado['tipo_usuarios'] == '2'){
 			$tipo = 'admin';
 		}
