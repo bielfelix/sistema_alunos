@@ -33,10 +33,13 @@
 	
 	while($dado = $bd->row($query)){
 		
-		if($dado['tipo_usuarios'] == '1'){
-			$tipo = 'Normal';
-		}else if($dado['tipo_usuarios'] == '2'){
-			$tipo = 'admin';
+		switch($dado['tipo_usuarios']){
+			case '1':
+				$tipo = 'Normal';
+				break;
+			case '2':
+				$tipo = 'admin';
+				break;
 		}
 		
 		$usuarios .= '
