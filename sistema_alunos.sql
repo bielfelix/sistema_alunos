@@ -480,20 +480,10 @@ INSERT INTO `alunos` (`cod_alunos`, `img_alunos`, `nome_alunos`, `cep_alunos`, `
 
 CREATE TABLE `cursos` (
   `cod_cursos` int(11) NOT NULL,
-  `nome_cursos` varchar(100) NOT NULL
+  `nome_cursos` varchar(100) NOT NULL,
+  `dtRegistro_cursos` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Despejando dados para a tabela `cursos`
---
-
-INSERT INTO `cursos` (`cod_cursos`, `nome_cursos`) VALUES
-(1, 'Administração'),
-(2, 'Engenharia de Produção'),
-(3, 'Sistemas de Informação'),
-(4, 'Engenharia Elétrica'),
-(5, 'Educação Física'),
-(6, 'Fisioterapia');
 
 -- --------------------------------------------------------
 
@@ -515,7 +505,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`cod_usuarios`, `nome_usuarios`, `email_usuarios`, `senha_usuarios`, `tipo_usuarios`, `dtRegistro_usuarios`) VALUES
-(1, 'Gabriel Felix', 'bielfelix@icloud.com', '3943fa95112672907aad91cbc071ab4b', '2', '2021-03-10 14:41:34');
+(1, 'Admin', 'root@teste.com', 'ea8f22013607b9cd30c594e3fb42b4f8', '2', '2021-03-10 14:41:34');
 
 --
 -- Índices de tabelas apagadas
